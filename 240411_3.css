@@ -1,0 +1,120 @@
+
+
+/*문서 전반에 적용하는 css*/
+
+*{}/*전체선택자 : htmal문서 전반, html보다 조금 더 큰 영역 js-Bom,Dom*/
+html{
+    font-size: 100%;/*margin 0 auto같은 개념, 제 폰트 크기대로 도출되는 것을 기본값으로*/
+}
+body{
+    color:brown;
+    font-family:sans-serif;   
+}
+
+
+/*세개의 섹션에 공통 적용되는 css*/
+/*각 섹션의 제목*/
+.title{
+    font-family: ???;
+    font-size: 8em;
+    /*h1,h2 제목 태그 하단에 나머지p태그나, table같은 글감과의 여백을 주고자 할때,
+    margin-bottom:'n'em; 등을 추가할 수 있습니다.*/
+}
+
+/*각 섹션의 단락*/
+p{
+    line-height: 1.7em;
+    /*줄(행) 간격이 전체적으로 조금 거리감이 있으므로, 추가합니다.*/
+}
+
+/*각 섹션 스크롤 제어*/
+
+/*세 개의 섹션을 묶는 큰 태그에 적용하는 css를 작성*/
+main{ 
+    overflow: auto; /*마우스로 화면 내용을 스크롤 할 때 그대로 스크롤링 될 수 있게 허용*/
+    scroll-snap-type: y mandatory; /*부모 요소에 어떻게 스크롤을 할건지 세팅*/
+
+    /*스크롤 할 때 부드러운 동작으로 화면 넘기기 위한 효과, 
+    mandatory : 의무적인, 법규에 정해진 - 스크롤 될 스냅영역과 일치할 때만 기능 구현됨
+    froximity : ~ 에 가까운, 근접한 - 스크롤 될 스냅영역에 근접하면 기능 구현됨
+    */
+    height: 100vh; /*디스플레이의 한 화면 높이 viewport-height가 100% 채워질 수 있도록 하는 것.*/
+}
+
+/*각 섹션마다 적용할 css를 작성*/
+section{
+    height: 100vh;
+    scroll-snap-align: start; /*자식요소에 스크롤 시작점을 만듬*/
+    background-repeat: no-repeat; /*백그라운드 이미지가 반복이 안되었으면 해서..*/
+    background-size: cover; /*각 섹션 높이 값인 100vh를 다 쓰도록 늘임*/
+    background-position: center center; /*이미지 배치(정돈값)를 어디로부터 재서 얹어놓을 건지*/
+}
+
+
+/*각 섹션별 css*/
+
+/*첫 번째 섹션css*/
+.box1{
+    background-image:url('./img/bread1.jpg') ;/*- hypen - 하이픈(더 세부적인 요소를 불러올때)*/
+    text-align: center; /*글자 가운데 정렬*/
+    padding-top: 2rem; /*10vh, 2em, 40px, 5%, 2rem*/
+}
+
+
+.box2{
+    background-image:url('./img/bread2.jpg') ;
+    display: flex; /*가로정렬을 유도*/
+    align-items: center; /*세로의 가운데*/
+    justify-content: center; /*가로의 가운데*/
+}
+
+.s2-p1{
+    margin-left: -40vw; /*정렬에 관하여 가장 쉽게 적용할 수 있는 것 중 하나는 패딩, 마진, (-값도 적용가능)*/
+}
+
+/*요소를 움직이려 하는데, 움직이지 않을 때 :
+    1. 부모요소한테는 시작점만 알려주고, 자식요소에게 실 위치값을 할당시켜줍니다.
+    2. 가로, 세로축 중심으로 움직일 수 있는 display 방식을 사용한 뒤, 자식요소에 좌표를 할당해봅니다.
+*/
+
+
+/*
+.s2-p1 h2{
+    width: 900px;
+    padding: 0 1rem;
+}
+
+.menu-list tr{
+    margin-bottom: 1rem;
+    line-height: 20px;
+}
+
+.menu-list td{
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+*/
+.box3{
+    background-image:url('./img/cafe.jpg') ;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.btn1{
+    background-color: chocolate;
+    color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+}
+
+.btn1:hover{
+    background-color: beige;
+    color: chocolate;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+}
+
