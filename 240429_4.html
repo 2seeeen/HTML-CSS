@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            color: #fff;
+            display: flex;
+        }
+
+        section{
+            display: inline-block;
+            vertical-align: top; /*valign의 원형*/
+            width: 25%;
+            height: 100vh;
+            box-sizing: border-box;
+            transition: all 1s ease-in-out;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 50px 40px;
+        }
+
+        section:hover{
+            width: 50%;
+        }
+        
+        section h1{
+            transform: rotate(90deg);
+            transition: transform 1s ease-in;
+        }
+        section:hover h1{
+            transform: rotate(0);
+        }
+
+        section p{
+            transform: rotate(90deg);
+            transition: transform opacity 1s ease-in;
+            opacity: 0;
+        }
+        section:hover p{
+            transform: rotate(0);
+            opacity: 1;
+        }
+        .img1{
+            background-image: url(https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3ByaW5nfGVufDB8fDB8fHww);
+        }
+        .img2{
+            background-image: url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyfGVufDB8fDB8fHww);
+        }
+        .img3{
+            background-image: url(https://images.unsplash.com/photo-1429198739803-7db875882052?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFsbHxlbnwwfHwwfHx8MA%3D%3D);
+        }
+        .img4{
+            background-image: url(https://images.unsplash.com/photo-1522043436628-a4bd7867030b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHdpbnRlcnxlbnwwfHwwfHx8MA%3D%3D);
+        }
+    </style>
+</head>
+<body>
+    <section class="img1">
+        <h1>Spring</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos voluptate, aliquam fugiat harum inventore laudantium illo! Error et tempore consectetur.</p>
+    </section>
+    <section class="img2">
+        <h1>Summer</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid cumque odio natus corporis blanditiis? Veritatis voluptatum labore expedita repellat earum!</p>
+    </section>
+    <section  class="img3">
+        <h1>Fall</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perferendis doloribus expedita nemo provident perspiciatis dolores rerum exercitationem dolor rem?</p>
+    </section>
+    <section class="img4">
+        <h1>Winter</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, recusandae quasi sint voluptatum necessitatibus at deleniti inventore? Optio, aperiam hic.</p>
+    </section>
+</body>
+</html>
