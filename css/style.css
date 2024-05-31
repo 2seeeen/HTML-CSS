@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "uft-8";
 
 *{
     margin: 0;
@@ -13,214 +13,179 @@ body{background-color: #fff; color: #333;}
 table{width: 100%; border-collapse: collapse;}
 button{cursor: pointer;}
 
-.wrap{
-    width: 100%;
-    position: relative;
+.wrap{width: 100%;}
+.top{
+    height: calc(100% - 120px);
+    display: flex;
 }
 
-.inner{display: flex;}
 header{
     width: 200px;
-    background-color: rgb(29, 136, 56);
+    background-color: rgb(195, 211, 50);
 }
-header .hlogo{
+header h1{
+    width: 150px;
     text-align: center;
-    padding: 50px 10px;
+    margin-left: 20px;
+    padding: 20px;
 }
 header nav{
-    width: 160px;
+    width: 150px;
     margin-left: 20px;
+    padding-top: 30px;
 }
 header nav>ul>li{
     position: relative;
 }
 header nav>ul>li>a{
     display: block;
+    background-color: #222;
     color: #fff;
     font-weight: bold;
-    padding: 10px;
-    padding-top: 10px;
-    text-align: center;
-    width: 160px;
-    background-color: rgb(10, 83, 10);
+    padding: 20px 0;
+    padding-left: 10px;
 }
-header nav>ul>li>a:hover{
-    color: #fff;
-    background-color: rgb(9, 58, 31);
-}
-header .sub{
+header nav>ul>li>a:hover{background-color: #555;}
+
+.sub{
     position: absolute;
     top: 0;
-    left: 180px;
-    z-index: 20;
-    width: calc(100vw - 200px);
+    left: 150px;
+    z-index: 10;
+    width: 150px;
     display: none;
-    background-color: rgb(0, 0, 0, .8);
 }
-header .sub li{float: left;}
-header .sub li a{
-    display: flex;
+
+.sub li a{
+    display: block;
+    background-color: rgba(0, 0, 0, .5);
     color: #fff;
+    padding: 20px 0;
+    padding-left: 10px;
+}
+.sub li a:hover{background-color: #555;}
+
+/*--------------------------------------------------*/
+.contents{width: 400px; padding: 30px 10px;}
+
+.banner{
+    padding: 20px 10px; 
+    background-color: rgb(47, 139, 87);
+    border-radius: 10px;
+}
+.banner img{width: 50px; height: 50px;}
+.banner ul a{display: flex; gap: 5px;}
+.banner ul a p{font-size: 12px;}
+
+.notice{padding: 20px 0; }
+.notice h2, .gall h2{
+    width: 130px; 
+    background-color: #3d7ac0;
+    text-align: center;
+    margin-left:15px;
+    border-radius: 10px 10px 0 0;
+}
+.notice table{
+    padding-left: 20px;
+    border-top: 3px solid #3d7ac0;
     padding: 10px;
-    padding-top: 10px;
-}
-/* .bg{
-    width: calc(100vw - 200px);
-    height: 165px;
-    background-color: rgb(0, 0, 0, .8);
-    position: absolute;
-    z-index: 15;
-    top: 145px;
-    left: 180px;
-    display: none;
-} */
-
-.contents{
-    width: calc(100% - 200px);
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
 }
 
-.contents .con1{
-    width: 100%;
-    height: 400px;
-    position: relative;
+table tr{
+    border-bottom: 1px solid #333; 
+    line-height: 30px;
+    text-align: left;
 }
+table td{font-size: 12px;}
+
+
+
+.gall{padding: 20px 0;}
+.gall ul{
+    display: flex; 
+    justify-content: space-around;
+    border-top: 3px solid #3d7ac0;
+    border-bottom: 3px solid #3d7ac0;
+    padding: 20px 0;
+}
+.gall img{width: 150px;}
+
+.link{padding: 20px 0;}
+.link ul{display: flex; justify-content: space-between;}
+.link ul li a{display: block; text-align: center;}
+.link ul li p{color: #333;}
+
+
+/*--------------------------------------------------*/
 .slide{
-    width: 100%;
-    height: 100%;
-}
-.slide ul{
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 600px);
     position: relative;
-    display: flex;
+    overflow: hidden;
 }
-.slide li{
-    width: 100%;
+
+.slide ul{
+    width: 300%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: seashell;
-    display: none;
-}
-.slide .s1{background:url(../img/main01.jpg) no-repeat center/cover; display: block;}
-.slide .s2{background:url(../img/main02.jpg) no-repeat center/cover;}
-.slide .s3{background:url(../img/main03.jpg) no-repeat center/cover;}
-
-.con2{
-    width: 100%;
-    height: 200px;
-    background-color: rgb(29, 85, 43);
-}
-.banner{
-    width: 100%;
-    height: 80%;
-    padding-top: 20px;
-    margin-left: 30px;
-}
-.con2 .banner ul{
+    z-index: 10;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
-.banner li{color: #fff;}
-.bannerimg{width: 80px; height: 80px;}
-.con2 .link{
-    width: 100px;
-    height: 300px;
-    background-color: darkolivegreen;
-    padding: 10px 0;
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    right: 0;
+.slide li{
+   position: relative;
+   width: calc(100% / 3);
+   height: 100%;
 }
-.link li{padding-bottom: 20px;}
-.link a{text-align: center;}
-
-.con3{
+.slide ul li a{display: block;}
+.slide li.s1{background: url(../img/s1.jpg) no-repeat center/cover;}
+.slide li.s2{background: url(../img/s2.jpg) no-repeat center/cover;}
+.slide li.s3{background: url(../img/s3.jpg) no-repeat center/cover;}
+ 
+.slide h2{
+    background-color: rgb(0, 0, 0, .5);
     width: 100%;
-    height: 250px;
-    position: relative;
-}
-
-
-.con3 .tab{
-    display: flex;
-    gap: 5px;
-    margin-left: 50px;
-}
-.tab h2{
-    width: 160px;
-    height: 40px;
-    background-color: green;
-    text-align: center;
+    padding: 30px;
+    color: #fff;
 }
 
 
 
-.con3 .text{
-    width: 80%;
-    height: 100%;
-    margin-left: 30px;
-    background-color: green;
-}
-
-
-.text table{}
-.text table tr{
-    border-bottom: 1px solid #333;
-    line-height: 30px;
-}
-.text table th{}
-.text table th a{padding-left: 10px;}
-
-.con3 .notice{/*display: none;*/}
-
-
-
-.gall{display: none;}
-.con3 .gall ul{
-    display: flex; 
-    gap: 10px;
-    align-items: center;
-}
-.con3 .gall a{display: block;}
-.con3 .gall p{text-align: center;}
-.gall img{width: 80%; height: 80%;}
+/*--------------------------------------------------*/
 
 footer{
     width: 100%;
-    height: 120px; 
-    background-color: #333;
+    height: 120px;
+    background-color: rgb(47, 139, 87);
     display: flex;
-    position: relative;
+    align-items: center;
 }
-footer .flogo{
-    width: 200px;
-    height: 100%;
-    text-align: center;
-    margin-top: 30px;
+.f_logo{margin-right: 20px;}
+.f_text{
+    display: block;
+    margin-right: 20px;
 }
-footer .f_text{
-    color: #fff;
-    text-align: left;
-    margin-top: 15px;
-    padding-left: 10px;
-}
-footer .go{margin-bottom: 5px;}
+.sitemap{padding-left: 200px;}
 .go span{padding-left: 5px;}
+/*--------------------------------------------------*/
+
 .popup{
-    display: none;
-    background-color: #666;
     width: 600px;
-    height: 300px;
-    border-radius: 20px;
-    padding: 20px;
+    background-color: rgb(195, 211, 50);
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 100;
+    z-index: 50;
     transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    display: none;
 }
-.popup button{float: right;}
+button{
+    float: right;
+    margin: 10px;
+}
+.popup h2{margin:20px 0;}
