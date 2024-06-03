@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{text-decoration: none; color: inherit;}
+li{list-style-type: none;}
+img{max-width: 100%;}
+body{background-color: #171c61; color: #333;}
+table{width: 100%; border-collapse: collapse;}
+button{cursor: pointer;}
+
+.wrap{
+    position: relative;
+}
+
+.inner{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 100px);
+    
+}
+
+
+header{
+    width: 200px;
+    background-color: #171c61;
+}
+
+.h_logo{
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+nav{
+    width: 160px;
+    margin-left: 50px;
+}
+nav>ul{
+    width: 100%;
+    padding: 50px 10px;
+}
+nav>ul>li{position: relative;}
+nav>ul>li>a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(39, 85, 184);
+    font-weight: bold;
+    color: #fff;
+}
+nav>ul>li>a:hover{background-color: rgb(21, 53, 121);}
+.sub{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 140px;
+}
+.sub a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(21, 53, 121);
+    color: #fff;
+}
+.sub a:hover{background-color: rgb(39, 85, 184);}
+.contents{
+    width: 400px;
+    height: 100%;
+    background-color: rgb(8, 34, 148);
+    padding: 0 25px;
+}
+.banner{
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.banner ul{display: flex; justify-content: center; align-items: center;}
+.banner li{padding: 20px 40px;}
+.banner img{width: 50px; height: 50px;}
+
+
+.tabmenu{margin-bottom: 20px;}
+.tap_btn{display: flex; gap: 5px;}
+.tap_btn h2{
+    width: 120px; 
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.notice table{
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    padding: 50px;
+}
+.notice table tr{
+    border-bottom: 3px solid #333;
+    line-height: 30px;
+    
+    
+}
+.notice table th{}
+.notice table th a{
+    font-weight: bold;
+}
+.notice table td{margin-left: 20px;}
+
+.tab_box article{
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    border-radius: 0 10px 10px 10px;
+}
+.gall{display: none;}
+.gall ul{display: flex; gap: 10px;}
+.gall li{margin: 30px 10px; text-align: center;}
+
+.go{width: 100%; margin: 20px 0;}
+.go ul{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+.go img:hover{opacity: .7;}
+
+
+.slide{
+    width: 100%;
+    overflow: hidden;
+}
+.slide ul{
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.slide ul li{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide ul li a{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .7);
+    padding: 20px;
+    color: #fff;
+}
+.slide ul li.s1{background:url(../img/img1.jpg) no-repeat center/cover; display: block;}
+.slide ul li.s2{background:url(../img/img2.jpg) no-repeat center/cover;}
+.slide ul li.s3{background:url(../img/img3.jpg) no-repeat center/cover;}
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #3c45c4;
+}
+footer{display: flex; align-items: center; justify-content: start;}
+footer h2{width: 200px; padding: 10px; text-align: center;}
+.copy{
+    width: 600px;
+    height: 100px;
+    text-align: left;
+    line-height: 100px;
+    margin-left: 30px;
+}
+footer .sns{
+    width: 200px; 
+    height: 100px;
+    margin-left: 800px; 
+}
+.sns ul{
+    width: 200px;
+    height: 100px;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+.popup{
+    display: none;
+    width: 600px;
+    background-color: #2b62aa;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+.popup h2, .popup p{margin-bottom: 20px;}
+
+.popup button{float: right;}
